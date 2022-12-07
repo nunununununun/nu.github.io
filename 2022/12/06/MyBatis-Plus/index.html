@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="cn" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MyBatis Plus - 毳的小白笔记</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="MyBatis Plusmybatis plus 是一款功能强大的 mybatis增强工具，可以自动生成代码，对jdbc进行封装
+简单应用创建一个新项目导入MyBatis Puls 依赖
+12345,"> 
+    <meta name="author" content="毳"> 
+    <link rel="alternative" href="atom.xml" title="毳的小白笔记" type="application/atom+xml"> 
+    <link rel="icon" href="/nu.github.io/img/logo.jfif"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/nu.github.io/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/nu.github.io/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = "2426530028"</script>
+    
+<script src="/nu.github.io/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/nu.github.io/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/nu.github.io/aplayer/dist/APlayer.min.js"></script>
+<script src="/nu.github.io/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">毳的小白笔记</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/nu.github.io/img/logo.jfif" alt="" data-url="https://nunununununun.github.io/nu.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">MyBatis Plus</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/nu.github.io/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/后端"><b>「
+                    </b>后端<b> 」</b></a>
+                
+                December 06, 2022
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/nu.github.io/2022/12/06/MyBatis-Plus/" title="MyBatis Plus" class="">MyBatis Plus</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    29k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    26 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/nu.github.io/tags/MyBatis-Plus/" rel="tag">MyBatis Plus</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/nu.github.io/tags/java/" rel="tag">java</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="MyBatis-Plus"><a href="#MyBatis-Plus" class="headerlink" title="MyBatis Plus"></a>MyBatis Plus</h1><p><a target="_blank" rel="noopener" href="https://baomidou.com/">mybatis plus</a> 是一款功能强大的 mybatis增强工具，可以自动生成代码，对jdbc进行封装</p>
+<h3 id="简单应用"><a href="#简单应用" class="headerlink" title="简单应用"></a>简单应用</h3><p>创建一个新项目<br><img src="mybatisplus01.png"><br>导入MyBatis Puls 依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>配置数据文件</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/数据库名?serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">用户</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">密码</span></span><br></pre></td></tr></table></figure>
+<p>创建接受对象<br><img src="mybatisplus02.png"><br>持久层接口只需要继承<br><code>BaseMapper&lt;user&gt;</code><br>测试一下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MybatisPlusApplicationTests</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> userdao userdaoaX;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        List&lt;teacher&gt; users = userdaoaX.selectList(<span class="literal">null</span>);</span><br><span class="line">        System.out.println(users);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这里注意，如果你没指定查询的表，那么mybatisplus会自动寻找数据库名.接受类名表中的数据<br><br>mybatis中的常用方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int insert(T t)</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>int deleteById(id)</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>updatebyid()</td>
+<td>修改</td>
+</tr>
+<tr>
+<td>selectById</td>
+<td>根据id查询</td>
+</tr>
+<tr>
+<td>selectList</td>
+<td>查询全部</td>
+</tr>
+<tr>
+<td>selectPage (Ipage&lt; T &gt; page)</td>
+<td>分页查询</td>
+</tr>
+<tr>
+<td>selectpage&lt; T &gt;(Wrapper&lt; T &gt; querywrapper)</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h2><p> lombok是一个用来快速生成get，set方法的插件<br> <br>依赖<br> <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><br> lombok常用注解</p>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@get</td>
+<td>自动生产get方法</td>
+</tr>
+<tr>
+<td>@set</td>
+<td>自动生产set方法</td>
+</tr>
+<tr>
+<td>@Tostring</td>
+<td>自动生成tostring方法</td>
+</tr>
+<tr>
+<td>@EqualsAndHashCode</td>
+<td>自动生成equals和hashcode方法</td>
+</tr>
+<tr>
+<td>@NoArgsConstructor</td>
+<td>生成无参构造器</td>
+</tr>
+<tr>
+<td>@AllArgsConstructor</td>
+<td>生成所有参数构造器</td>
+</tr>
+<tr>
+<td>@RequiredArgsConstructor</td>
+<td>生成find修饰的参数的构造器</td>
+</tr>
+<tr>
+<td>@Data</td>
+<td>生成get&#x2F;set，tostring,equals,hashcode和RequiredArgsConstructor方法</td>
+</tr>
+</tbody></table>
+<hr>
+<p>mypatis puls分页查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    userdaoaX.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;页码值=》&quot;</span>+page.getCurrent());</span><br><span class="line">    System.out.println(<span class="string">&quot;每页显示数=》&quot;</span>+page.getSize());</span><br><span class="line">    System.out.println(<span class="string">&quot;数据=&gt;&quot;</span>+page.getRecords());</span><br><span class="line">    System.out.println(<span class="string">&quot;一共多少页=》&quot;</span>+page.getPages());</span><br><span class="line">    System.out.println(<span class="string">&quot;一共多少数据=》&quot;</span>+0page.getTotal());</span><br><span class="line">   <span class="comment">/* List&lt;teacher&gt; users = userdaoaX.selectList(null);</span></span><br><span class="line"><span class="comment">    System.out.println(users);*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这之前还需要配置分页拦截器<br>写一个mybatisplus的配置类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mybatis__plus.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> mao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2022/12/06/17:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Mpconfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//定义拦截器</span></span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">mybatisPlusInterceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        <span class="comment">//添加拦截器</span></span><br><span class="line"></span><br><span class="line">       、 </span><br><span class="line">        mybatisPlusInterceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> mybatisPlusInterceptor</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>测试</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mybatis__plus;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.metadata.IPage;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.example.mybatis__plus.dao.userdao;</span><br><span class="line"><span class="comment">//import domain.user;</span></span><br><span class="line"><span class="comment">//import com.example.mybatis__plus.domain.teacher;</span></span><br><span class="line"><span class="keyword">import</span> com.example.mybatis__plus.domain.teacher;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MybatisPlusApplicationTests</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> userdao userdaoaX;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">        userdaoaX.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;页码值=》&quot;</span>+page.getCurrent());</span><br><span class="line">        System.out.println(<span class="string">&quot;每页显示数=》&quot;</span>+page.getSize());</span><br><span class="line">        System.out.println(<span class="string">&quot;数据=&gt;&quot;</span>+page.getRecords());</span><br><span class="line">        System.out.println(<span class="string">&quot;一共多少页=》&quot;</span>+page.getPages());</span><br><span class="line">        System.out.println(<span class="string">&quot;一共多少数据=》&quot;</span>+page.getTotal());</span><br><span class="line">       <span class="comment">/* List&lt;teacher&gt; users = userdaoaX.selectList(null);</span></span><br><span class="line"><span class="comment">        System.out.println(users);*/</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>配置sql语句日志</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">configuration:</span></span><br><span class="line">    <span class="attr">log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关闭日志</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/School?serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">maoxinkai</span></span><br><span class="line">  <span class="attr">main:</span></span><br><span class="line">    <span class="attr">banner-mode:</span> <span class="string">off</span></span><br><span class="line">    <span class="comment">#关闭spring日志</span></span><br><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">configuration:</span></span><br><span class="line">    <span class="attr">log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">banner:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment">#关闭mybatis日志</span></span><br></pre></td></tr></table></figure>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p>条件查询需要创建wrapper，添加条件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">QueryWrapper</span> <span class="variable">wrapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>();</span><br><span class="line">     wrapper.lt(<span class="string">&quot;id&quot;</span>,<span class="number">2</span>);</span><br><span class="line">     <span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> userdaoaX.selectList(wrapper);</span><br><span class="line">     <span class="keyword">for</span> (Object i : list) &#123;</span><br><span class="line">         System.out.println(i);</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>这里lt表示&lt;小于，gt表示&gt;大于<br><br>或者可以使用lambda格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QueryWrapper&lt;teacher&gt; teacherQueryWrapper = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;&gt;();</span><br><span class="line">      teacherQueryWrapper.lambda().lt(teacher::getId,<span class="number">2</span>);</span><br><span class="line">      List&lt;teacher&gt; teachers = userdaoaX.selectList(teacherQueryWrapper);</span><br><span class="line">      <span class="keyword">for</span> (teacher i: teachers) &#123;</span><br><span class="line">          System.out.println(i);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="空值比较设置"><a href="#空值比较设置" class="headerlink" title="空值比较设置"></a>空值比较设置</h2><p>先创建一个接收类的比较类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">teacherquert</span> <span class="keyword">extends</span> <span class="title class_">teacher</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">long</span> id2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后再测试类中使用mybatis提供的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#125;*/</span><br><span class="line"><span class="type">teacherquert</span> <span class="variable">uq</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">teacherquert</span>();</span><br><span class="line">uq.setId2(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">QueryWrapper</span> <span class="variable">qw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;teacher&gt;();</span><br><span class="line">qw.lt(<span class="literal">null</span> != (uq.getId2()),teacher::getId,uq.getId2())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>比较方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.eq</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>between</td>
+<td>qwe.between(user::getage,值1，值2)在值一和值二之间</td>
+</tr>
+<tr>
+<td>likeLeft</td>
+<td>模糊匹配 参数右边有值的&#x3D;&#x3D;“x*”</td>
+</tr>
+<tr>
+<td>likeRighrt</td>
+<td>参数的左边有值&#x3D;&#x3D;“*x”</td>
+</tr>
+</tbody></table>
+<h2 id="查询投影"><a href="#查询投影" class="headerlink" title="查询投影"></a>查询投影</h2><p>1.只查询个别属性</p>
+<figure class="highlight java"><figcaption><span>QueryWrapper qw </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qw.select(<span class="string">&quot;id&quot;</span>,<span class="string">&quot;name&quot;</span>);</span><br><span class="line"><span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> userdaoaX.selectList(qw);</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
+<p>2.查询行数加别名</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">QueryWrapper</span> <span class="variable">qw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;teacher&gt;();</span><br><span class="line">  qw.select(<span class="string">&quot;count(*) asbieming&quot;</span>);</span><br><span class="line"><span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> userdaoaX.selectList(qw);</span><br><span class="line">System.out.println(list);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>3.分组查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">QueryWrapper</span> <span class="variable">qw</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;teacher&gt;();</span><br><span class="line">qw.select(<span class="string">&quot;count(*) as bieming&quot;</span>);</span><br><span class="line">qw.groupBy(<span class="string">&quot;sex&quot;</span>);</span><br><span class="line"><span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> userdaoaX.selectList(qw);</span><br><span class="line">System.out.println(list);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="数据库字段映射"><a href="#数据库字段映射" class="headerlink" title="数据库字段映射"></a>数据库字段映射</h2><p>在实体类的属性上添加@TableField()注解，可以操作字段映射</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@TableField(value &#x3D; “数据库中的字段名”)</td>
+<td>映射想要属性所对应的数据库字段</td>
+</tr>
+<tr>
+<td>@TableField(exist &#x3D; false)</td>
+<td>添加数据库中未定义的属性</td>
+</tr>
+<tr>
+<td>@TableField(select &#x3D; false)</td>
+<td>查询全集时不查询此属性</td>
+</tr>
+<tr>
+<td>注解<code>@TableName(&#39;数据库表明&#39;)</code>用来映射数据库表名</td>
+<td></td>
+</tr>
+<tr>
+<td>注解<code>@TableId(type = xxx)</code>用来决定id自增策略</td>
+<td></td>
+</tr>
+<tr>
+<td>参数</td>
+<td>作用</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>IdType.AUTO</td>
+<td>默认使用数据库的id自增策略</td>
+</tr>
+<tr>
+<td>INPUT</td>
+<td>必须自己指定id</td>
+</tr>
+<tr>
+<td>ASSIGN_ID</td>
+<td>雪花算法生成id</td>
+</tr>
+<tr>
+<td>ASSPGN_UUID</td>
+<td>UUID算法生成id</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>删除、查询多条数据<br>deletBatchids(传入一个数组)<br>selecBatchids()</p>
+</blockquote>
+<h2 id="逻辑删除"><a href="#逻辑删除" class="headerlink" title="逻辑删除"></a>逻辑删除</h2><p>在数据表中添加一个判断字段默认为0，以后删除字段将其改为1，<br>在对应的实体类属性上加上@TableLogic注解标注逻辑判断属性。<br>在myl配置文件中设置</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mybatis-plus</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-field:</span> <span class="string">逻辑判断属性名</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="string">没删除时的值</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="string">删除后的值</span></span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/nu.github.io/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://s2.ax1x.com/2019/09/19/nLtSiD.png" height=300 width=300></img>
+                    <p>毳</p>
+                    <span>青春永驻，骑马少年！</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/nunununununun" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">6 <p>Articles</p></a></li>
+                    <li><a href="/categories">2 <p>Categories</p></a></li>
+                    <li><a href="/tags">6 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MyBatis-Plus"><span class="toc-number">1.</span> <span class="toc-text">MyBatis Plus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.1.</span> <span class="toc-text">简单应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lombok"><span class="toc-number">1.1.</span> <span class="toc-text">lombok</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.1.</span> <span class="toc-text">条件查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E5%80%BC%E6%AF%94%E8%BE%83%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">空值比较设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%8A%95%E5%BD%B1"><span class="toc-number">1.3.</span> <span class="toc-text">查询投影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E6%98%A0%E5%B0%84"><span class="toc-number">1.4.</span> <span class="toc-text">数据库字段映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4"><span class="toc-number">1.5.</span> <span class="toc-text">逻辑删除</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2022
+        <span class="gradient-text">
+            毳
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.3" target="_blank" rel="noopener">v1.4.9.3</a></small>
+        
+        </br>
+        
+        <span class="gradient-text">
+            <a href="https://beian.miit.gov.cn/" title="beian.miit.gov.cn" target="_blank" rel="noopener">beian.miit.gov.cn</a>
+        </span>
+        
+        
+        </br>
+        <span style="display: inline-block;"> <img src=/nu.github.io/null></span>
+        
+        <span class="gradient-text">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049" title="www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049" target="_blank" rel="noopener">www.beian.gov.cn&#x2F;portal&#x2F;registerSystemInfo?recordcode&#x3D;44010602009049</a>
+        </span>
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/nu.github.io/js/plugin.js"></script>
+<script src="/nu.github.io/js/obsidian.js"></script>
+<script src="/nu.github.io/js/jquery.truncate.js"></script>
+<script src="/nu.github.io/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/nu.github.io/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['青春永驻，骑马少年！', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
